@@ -7,6 +7,38 @@ use Auth;
 
 class AuthController extends Controller
 {
+    /**
+     *@OA\Post(path="/lumen/public/login",
+     *   tags={"Login"},
+     *   summary="Login",
+     *   description="",
+     *   operationId="placeOrder",
+     *   @OA\RequestBody(
+     *       required=true,
+     *        @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     description="Input username",
+     *                     property="username",
+     *                     type="string",
+     *                 ),
+     *                  @OA\Property(
+     *                     description="Input password",
+     *                     property="password",
+     *                     type="string",
+     *                 ),
+     *             )
+     *         )
+     *   ),
+     *   @OA\Response(
+     *     response=200,
+     *     description="successful operation"
+     *   ),
+     *   @OA\Response(response=400, description="Invalid Order")
+     * )
+     */
+
     public function login(Request $r)
     {
         $username = $r->username;

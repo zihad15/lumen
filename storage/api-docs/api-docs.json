@@ -1,0 +1,169 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dokumentasi API",
+        "version": "11"
+    },
+    "paths": {
+        "/lumen/public/login": {
+            "post": {
+                "tags": [
+                    "Login"
+                ],
+                "summary": "Login",
+                "description": "",
+                "operationId": "placeOrder",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "username": {
+                                        "description": "Input username",
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "description": "Input password",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Order"
+                    }
+                }
+            }
+        },
+        "/lumen/public/userCreate": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Create",
+                "description": "",
+                "operationId": "placeOrder",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Input user name",
+                                        "type": "string"
+                                    },
+                                    "username": {
+                                        "description": "Input username",
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "description": "Input password",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Order"
+                    }
+                }
+            }
+        },
+        "/lumen/public/userUpdate": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Update",
+                "description": "",
+                "operationId": "placeOrder",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Input user id",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "description": "Input user name",
+                                        "type": "string"
+                                    },
+                                    "username": {
+                                        "description": "Input username",
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "description": "Input password",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Order"
+                    }
+                }
+            }
+        },
+        "/lumen/public/userDelete": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Delete",
+                "description": "",
+                "operationId": "placeOrder",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Input user id",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Order"
+                    }
+                }
+            }
+        }
+    }
+}

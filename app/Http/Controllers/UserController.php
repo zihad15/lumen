@@ -8,8 +8,47 @@ use Auth;
 
 class UserController extends Controller
 {
+    /**
+     * @OA\Info(title="Dokumentasi API",version="11")
+     *
+     *@OA\Post(path="/lumen/public/userCreate",
+     *   tags={"User"},
+     *   summary="User Create",
+     *   description="",
+     *   operationId="placeOrder",
+     *   @OA\RequestBody(
+     *       required=true,
+     *        @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     description="Input user name",
+     *                     property="name",
+     *                     type="string"
+     *                 ),
+     *                 @OA\Property(
+     *                     description="Input username",
+     *                     property="username",
+     *                     type="string",
+     *                 ),
+     *                  @OA\Property(
+     *                     description="Input password",
+     *                     property="password",
+     *                     type="string",
+     *                 ),
+     *             )
+     *         )
+     *   ),
+     *   @OA\Response(
+     *     response=200,
+     *     description="successful operation"
+     *   ),
+     *   @OA\Response(response=400, description="Invalid Order")
+     * )
+     */
     public function create(Request $r)
     {
+
         $name = $r->name;
         $username = $r->username;
         $password = $r->password;
@@ -35,6 +74,49 @@ class UserController extends Controller
             'data'=> $user
         ]);
     }
+
+    /**
+     *@OA\Post(path="/lumen/public/userUpdate",
+     *   tags={"User"},
+     *   summary="User Update",
+     *   description="",
+     *   operationId="placeOrder",
+     *   @OA\RequestBody(
+     *       required=true,
+     *        @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     description="Input user id",
+     *                     property="id",
+     *                     type="string"
+     *                 ),
+     *                 @OA\Property(
+     *                     description="Input user name",
+     *                     property="name",
+     *                     type="string"
+     *                 ),
+     *                 @OA\Property(
+     *                     description="Input username",
+     *                     property="username",
+     *                     type="string",
+     *                 ),
+     *                  @OA\Property(
+     *                     description="Input password",
+     *                     property="password",
+     *                     type="string",
+     *                 ),
+     *             )
+     *         )
+     *   ),
+     *   @OA\Response(
+     *     response=200,
+     *     description="successful operation",
+     *     @OA\Schema(ref="")
+     *   ),
+     *   @OA\Response(response=400, description="Invalid Order")
+     * )
+     */
 
     public function update(Request $r)
     {
@@ -72,6 +154,34 @@ class UserController extends Controller
             'message' => 'Data updated successfully.'
         ]);
     }
+
+    /**
+     *@OA\Post(path="/lumen/public/userDelete",
+     *   tags={"User"},
+     *   summary="User Delete",
+     *   description="",
+     *   operationId="placeOrder",
+     *   @OA\RequestBody(
+     *       required=true,
+     *        @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     description="Input user id",
+     *                     property="id",
+     *                     type="string"
+     *                 ),
+     *             )
+     *         )
+     *   ),
+     *   @OA\Response(
+     *     response=200,
+     *     description="successful operation",
+     *     @OA\Schema(ref="")
+     *   ),
+     *   @OA\Response(response=400, description="Invalid Order")
+     * )
+     */
 
     public function delete(Request $r)
     {
