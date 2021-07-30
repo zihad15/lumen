@@ -24,6 +24,7 @@ $app = new Laravel\Lumen\Application(
 );
 
 $app->withFacades();
+$app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
 $app->withEloquent();
 
 /*
@@ -94,8 +95,9 @@ $app->routeMiddleware([
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(Ixudra\Curl\CurlServiceProvider::class);
-$app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+$app->register('Sentry\Laravel\ServiceProvider');
+$app->register(Jenssegers\Mongodb\Session\SessionServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
 class_alias('Ixudra\Curl\Facades\Curl', 'Curl');
