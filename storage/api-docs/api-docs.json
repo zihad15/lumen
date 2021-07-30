@@ -5,10 +5,28 @@
         "version": "11"
     },
     "paths": {
+        "/lumen/public/ascData": {
+            "get": {
+                "tags": [
+                    "ASC Denom JSON"
+                ],
+                "summary": "ASC Denom JSON",
+                "description": "",
+                "operationId": "placeOrder",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Order"
+                    }
+                }
+            }
+        },
         "/lumen/public/login": {
             "post": {
                 "tags": [
-                    "Login"
+                    "Auth"
                 ],
                 "summary": "Login",
                 "description": "",

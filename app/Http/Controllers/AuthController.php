@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     /**
      *@OA\Post(path="/lumen/public/login",
-     *   tags={"Login"},
+     *   tags={"Auth"},
      *   summary="Login",
      *   description="",
      *   operationId="placeOrder",

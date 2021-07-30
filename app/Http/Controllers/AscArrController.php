@@ -7,6 +7,19 @@ use Curl;
 
 class AscArrController extends Controller
 {
+    /**
+     *@OA\Get(path="/lumen/public/ascData",
+     *   tags={"ASC Denom JSON"},
+     *   summary="ASC Denom JSON",
+     *   description="",
+     *   operationId="placeOrder",
+     *   @OA\Response(
+     *     response=200,
+     *     description="successful operation"
+     *   ),
+     *   @OA\Response(response=400, description="Invalid Order")
+     * )
+     */
     public function asc()
     {
         $arr = [];
