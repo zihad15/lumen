@@ -14,6 +14,7 @@ class AscArrController extends Controller
         $json = json_decode(file_get_contents(storage_path('app\filter-data.json')), true);
         $dataTarget = $json['data']['response']['billdetails'];
 
+        sort($dataTarget);
         for ($i=0; $i < count($dataTarget); $i++) { 
             $cutString = str_replace("DENOM           : ", "", $dataTarget[$i]['body'][0]);
             if ((int) $cutString >= 100000) {
